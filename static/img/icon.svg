@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <circle id="icon-a" cx="92" cy="92" r="92"/>
+    <filter id="icon-b" width="119%" height="119%" x="-9.5%" y="-8.4%" filterUnits="objectBoundingBox">
+      <feMorphology in="SourceAlpha" operator="dilate" radius=".5" result="shadowSpreadOuter1"/>
+      <feOffset dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+    </filter>
+    <path id="icon-e" d="M184,2 L183.726274,59.3957156 L115.114624,128.009116 C114.75458,128.398265 114.385478,128.782055 114.007316,129.160216 C98.2209381,144.946595 72.6261619,144.946595 56.8397837,129.160216 C41.0534054,113.373838 41.0534054,87.7790619 56.8397837,71.9926837 C57.2179451,71.6145223 57.6017349,71.2454197 57.9908835,70.8853759 L126.604284,2.2737261 L184,2 Z"/>
+    <filter id="icon-d" width="115.8%" height="115.8%" x="-7.9%" y="-7.2%" filterUnits="objectBoundingBox">
+      <feMorphology in="SourceAlpha" operator="dilate" radius=".5" result="shadowSpreadOuter1"/>
+      <feOffset dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.32 0"/>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" transform="translate(8 8)">
+    <mask id="icon-c" fill="#fff">
+      <use xlink:href="#icon-a"/>
+    </mask>
+    <use fill="#000" filter="url(#icon-b)" xlink:href="#icon-a"/>
+    <use fill="#EC407A" xlink:href="#icon-a"/>
+    <g mask="url(#icon-c)">
+      <use fill="#000" filter="url(#icon-d)" xlink:href="#icon-e"/>
+      <use fill="#FFF" xlink:href="#icon-e"/>
+    </g>
+  </g>
+</svg>

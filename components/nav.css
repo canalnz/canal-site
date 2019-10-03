@@ -1,0 +1,38 @@
+.nav {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 0 12px;
+  left: 0;
+  right: 0;
+}
+.nav.fixedNav {
+  position: fixed;
+  z-index: 1;
+}
+.nav a {
+  color: #FFF;
+  padding: 8px;
+  margin: 8px;
+  text-decoration: none;
+}
+.nav .button {
+  background: #EC407A;
+  border-radius: 4px;
+}
+
+.navTitle {
+  display: flex;
+  align-items: center;
+}
+.navIcon {
+  width: 60px;
+  margin: 6px;
+}
+.navTitle h2 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 400;
+}

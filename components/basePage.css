@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Mono:500&display=swap');
+* {
+  position: relative;
+}
+
+body {
+  font-family: 'Lato', 'Arial', sans-serif;
+  margin: 0;
+  background: #333;
+  color: #FFF;
+  font-size: 18px;
+}
+
+h1, h2 {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+}
+h1 {
+  font-size: 60px;
+}
+h2 {
+  font-size: 36px;
+}
+
+a {
+  color: inherit;
+}
+
+:global(.flex) {
+  flex: 1;
+}

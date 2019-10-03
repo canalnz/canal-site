@@ -1,0 +1,19 @@
+h2 {
+  margin-top: 0;
+}
+.opts {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opts > *:not(.divider) {
+  width: 80px;
+}
+
+.divider {
+  margin: 6px;
+  height: 40px;
+  width: 2px;
+  background: #FFF;
+}
