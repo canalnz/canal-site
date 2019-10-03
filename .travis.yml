@@ -16,5 +16,5 @@ deploy:
   target_branch: gh-pages
   local_dir: out
   on:
-    branch: source
+    branch: master
 
