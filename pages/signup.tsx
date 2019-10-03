@@ -11,11 +11,11 @@ const SignupPage = () => (
     <PanelBase>
       <h2>Canal is currently in closed beta</h2>
       <p>We're currently testing with a limited group of users, while Canal is still being built.
-        Sign up to ask for access.</p>
+        Register to ask for access.</p>
       <div className={styles.opts}>
-        <Link href='//api.canal.pointless.me/oauth/start'><a>Login</a></Link>
+        <Link href='//api.canal.asherfoster.com/oauth/start'><a>Login</a></Link>
         <span className={styles.divider} />
-        <a href='//google.com'>Sign up</a>
+        <a href='https://forms.gle/z3ztPXURLTXdfhxm6'>Register</a>
       </div>
     </PanelBase>
   </BasePage>
