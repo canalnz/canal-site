@@ -8,7 +8,6 @@ deploy:
     bucket: "$BUCKET_PROD_NAME"
     key_file: "gcs-prod.json"
     local_dir: dist
-    acl: none
     detect_encoding: true
     on:
       branch: master
