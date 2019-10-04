@@ -1,7 +1,6 @@
 language: node_js
 node_js: '10'
-script: npm run test && sh build.sh
-
+script: npm run build && npm run export
 
 deploy:
   - provider: gcs
@@ -17,7 +16,7 @@ deploy:
     edge: true
     bucket: "$BUCKET_DEV_NAME"
     key_file: "gcs-dev.json"
-    local_dir: dist
+    local_dir: out
     detect_encoding: true
     on:
       branch: develop
