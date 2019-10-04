@@ -1,20 +1,26 @@
 language: node_js
 node_js: '10'
-branches:
-  only:
-    - master
-
 script: npm run build && npm run export
 
-before_deploy: cp out_patch/* out && touch out/.nojekyll
-
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  keep_history: true
-  target_branch: gh-pages
-  local_dir: out
-  on:
-    branch: master
+  - provider: gcs
+    edge: true
+    bucket: "$BUCKET_PROD_NAME"
+    key_file: "gcs-prod.json"
+    local_dir: dist
+    acl: none
+    detect_encoding: true
+    on:
+      branch: master
+  - provider: gcs
+    edge: true
+    bucket: "$BUCKET_DEV_NAME"
+    key_file: "gcs-dev.json"
+    local_dir: out
+    detect_encoding: true
+    on:
+      branch: develop
 
+before_deploy:
+  - openssl aes-256-cbc -K $encrypted_3242654bf1e7_key -iv $encrypted_3242654bf1e7_iv -in secrets.tar.enc -out secrets.tar -d
+  - tar xvf secrets.tar
