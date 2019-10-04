@@ -8,10 +8,6 @@ import Link from 'next/link';
 
 const Home = () => (
   <BasePage>
-    <Head>
-      <title>Home</title>
-    </Head>
-
     <Nav hideName={true} fixed />
     <section className={styles.hero}>
       <div className={styles.heroText}>
