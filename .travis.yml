@@ -7,7 +7,7 @@ deploy:
     edge: true
     bucket: "$BUCKET_PROD_NAME"
     key_file: "gcs-prod.json"
-    local_dir: dist
+    local_dir: out
     detect_encoding: true
     on:
       branch: master
