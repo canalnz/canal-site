@@ -5,7 +5,7 @@ import './basePage.css';
 const BasePage = (props) => (
   <React.Fragment>
       <Head>
-          <title>Canal - Modernise your bot</title>
+          <title>Canal - Modularise your bot</title>
       </Head>
       {props.children}
   </React.Fragment>
