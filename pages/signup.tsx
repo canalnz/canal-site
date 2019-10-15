@@ -13,7 +13,7 @@ const SignupPage = () => (
       <p>We're currently testing with a limited group of users, while Canal is still being built.
         Register to ask for access.</p>
       <div className={styles.opts}>
-        <Link href='//api.canal.asherfoster.com/oauth/discord/start'><a>Login</a></Link>
+        <Link href='//api.canal.nz/oauth/discord/start'><a>Login</a></Link>
         <span className={styles.divider} />
         <a href='https://forms.gle/z3ztPXURLTXdfhxm6'>Register</a>
       </div>

@@ -24,7 +24,7 @@ const InvitePage = () => {
           {key ? (<React.Fragment>
             <h2 style={{marginTop: 0}}>You're awesome!</h2>
             <p>Welcome to the Canal closed beta</p>
-            <a href={'//api.canal.asherfoster.com/oauth/discord/start?key=' + key}>Sign up</a>
+            <a href={'//api.canal.nz/oauth/discord/start?key=' + key}>Sign up</a>
           </React.Fragment>) : <span>Loading...</span>}
         </PanelBase>
       </BasePage>
