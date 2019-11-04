@@ -4,13 +4,13 @@ script: npm run build && npm run export
 
 deploy:
   - provider: firebase
-    project: canalapp
+    project: prod
     edge: true
     on:
       branch: master
 
   - provider: firebase
-    project: canaldev
+    project: dev
     edge: true
     on:
       branch: develop

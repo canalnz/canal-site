@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "canaldev"
+    "default": "canaldev",
+    "dev": "canaldev",
+    "prod": "canalapp"
   }
 }
