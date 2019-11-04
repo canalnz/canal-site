@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AppRedirectPage = () => {
-  window.location.href = 'https://app.canal.nz';
+  if (process.browser) window.location.href = 'https://app.canal.nz';
   return (
     <h1>Redirecting you...</h1>
   );
