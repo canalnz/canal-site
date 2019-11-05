@@ -3,23 +3,14 @@ node_js: '10'
 script: npm run build && npm run export
 
 deploy:
-  - provider: gcs
+  - provider: firebase
+    project: prod
     edge: true
-    bucket: "$BUCKET_PROD_NAME"
-    key_file: "gcs-prod.json"
-    local_dir: out
-    detect_encoding: true
     on:
       branch: master
-  - provider: gcs
+
+  - provider: firebase
+    project: dev
     edge: true
-    bucket: "$BUCKET_DEV_NAME"
-    key_file: "gcs-dev.json"
-    local_dir: out
-    detect_encoding: true
     on:
       branch: develop
-
-before_deploy:
-  - openssl aes-256-cbc -K $encrypted_3242654bf1e7_key -iv $encrypted_3242654bf1e7_iv -in secrets.tar.enc -out secrets.tar -d
-  - tar xvf secrets.tar
